@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{52A685F6-83B3-47F2-A887-23C688F0AAE3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TestingFSHeader</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>FSPServer</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\dimar\source\boost\boost_1_69_0;C:\Users\dimar\source\SQLAPI\include;C:\Users\dimar\source\executors\executors;C:\Users\dimar\source\json;C:\Users\dimar\source\repos\FSP\Common;C:\Users\dimar\source\OpenSSL-Win32\include</IncludePath>
+    <LibraryPath>C:\Users\dimar\source\boost\boost_1_69_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\dimar\source\boost\boost_1_69_0;C:\Users\dimar\source\json;C:\Users\dimar\source\executors\executors;C:\Users\dimar\source\SQLAPI\include;C:\Users\dimar\source\repos\FSP\Common;C:\Users\dimar\source\OpenSSL-Win32\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dimar\source\boost\boost_1_69_0\stage\lib;C:\Users\dimar\source\SQLAPI\vs2017\x86_64\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0501</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\dimar\source\SQLAPI\lib\sqlapi.lib;libcrypto32MDd.lib;libssl32MDd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\dimar\source\OpenSSL-Win32\lib\VC\static</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\dimar\source\SQLAPI\vs2017\x86_64\lib\sqlapi.lib;libcrypto32MDd.lib;libssl32MDd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\dimar\source\OpenSSL-Win32\lib\VC\static</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\abstract_compressor.h" />
+    <ClInclude Include="..\..\Common\async_windows_file_io.h" />
+    <ClInclude Include="..\..\Common\base64.h" />
+    <ClInclude Include="..\..\Common\bzip2compressor.h" />
+    <ClInclude Include="..\..\Common\ConfigSettings.h" />
+    <ClInclude Include="..\..\Common\FilesStorage.h" />
+    <ClInclude Include="..\..\Common\FilesStorageTraits.h" />
+    <ClInclude Include="..\..\Common\FileStorageErrorCode.h" />
+    <ClInclude Include="..\..\Common\fsp_commands.h" />
+    <ClInclude Include="..\..\Common\fsp_compressions.h" />
+    <ClInclude Include="..\..\Common\fsp_compressors.h" />
+    <ClInclude Include="..\..\Common\fsp_content_type_formats.h" />
+    <ClInclude Include="..\..\Common\fsp_headers.h" />
+    <ClInclude Include="..\..\Common\fsp_notification_types.h" />
+    <ClInclude Include="..\..\Common\fsp_querry_types.h" />
+    <ClInclude Include="..\..\Common\fsp_responses.h" />
+    <ClInclude Include="..\..\Common\fsp_ssl_versions.h" />
+    <ClInclude Include="..\..\Common\gzip_compressor.h" />
+    <ClInclude Include="..\..\Common\KeysForConfigSettings.h" />
+    <ClInclude Include="..\..\Common\lzma_compressor.h" />
+    <ClInclude Include="..\..\Common\message.h" />
+    <ClInclude Include="..\..\Common\msg_parser.h" />
+    <ClInclude Include="..\..\Common\mutable_buffer.h" />
+    <ClInclude Include="..\..\Common\protocol.h" />
+    <ClInclude Include="..\..\Common\RAMStoragePolicy.h" />
+    <ClInclude Include="..\..\Common\simple_timer.h" />
+    <ClInclude Include="..\..\Common\zlib_compressor.h" />
+    <ClInclude Include="abstract_file_deliver.h" />
+    <ClInclude Include="abstract_file_receiver.h" />
+    <ClInclude Include="actions.h" />
+    <ClInclude Include="backup_requests_manager.h" />
+    <ClInclude Include="basic_validator.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="compressed_file_deliver.h" />
+    <ClInclude Include="compressed_file_receiver.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="confirmator.h" />
+    <ClInclude Include="connection.h" />
+    <ClInclude Include="connection_manager.h" />
+    <ClInclude Include="download_manager.h" />
+    <ClInclude Include="guards.h" />
+    <ClInclude Include="IUsersDB.h" />
+    <ClInclude Include="priority_scheduler.h" />
+    <ClInclude Include="protocol_impl.h" />
+    <ClInclude Include="scheduler_priorities.h" />
+    <ClInclude Include="semantic_validator.h" />
+    <ClInclude Include="server_side_handler.h" />
+    <ClInclude Include="request_scheduler.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="SQLiteDB.h" />
+    <ClInclude Include="state_machine.h" />
+    <ClInclude Include="stream_file_deliver.h" />
+    <ClInclude Include="stream_mode_file_receiver.h" />
+    <ClInclude Include="transition_validator.h" />
+    <ClInclude Include="upload_manager.h" />
+    <ClInclude Include="VirtualFileSystemTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\base64.cpp" />
+    <ClCompile Include="..\..\Common\bzip2_compressor.cpp" />
+    <ClCompile Include="..\..\Common\ConfigSettings.cpp" />
+    <ClCompile Include="..\..\Common\gzip_compressor.cpp" />
+    <ClCompile Include="..\..\Common\lzma_compressor.cpp" />
+    <ClCompile Include="..\..\Common\message.cpp" />
+    <ClCompile Include="..\..\Common\msg_parser.cpp" />
+    <ClCompile Include="..\..\Common\zlib_compressor.cpp" />
+    <ClCompile Include="backup_requests_manager.cpp" />
+    <ClCompile Include="basic_validator.cpp" />
+    <ClCompile Include="compressed_mode_file_deliver.cpp" />
+    <ClCompile Include="compressed_mode_file_receiver.cpp" />
+    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="confirmator.cpp" />
+    <ClCompile Include="connection.cpp" />
+    <ClCompile Include="connection_manager.cpp" />
+    <ClCompile Include="download_manager.cpp" />
+    <ClCompile Include="IUsersDB.cpp" />
+    <ClCompile Include="semantic_validator.cpp" />
+    <ClCompile Include="server_side_handler.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="SQLiteDB.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="stream_file_deliver.cpp" />
+    <ClCompile Include="stream_mode_file_receiver.cpp" />
+    <ClCompile Include="transition_validator.cpp" />
+    <ClCompile Include="upload_manager.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
